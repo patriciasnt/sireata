@@ -1,4 +1,4 @@
-package br.edu.utfpr.dv.sireata.dao;
+package Repository;
 
 @SpringBootApplication
 public interface JPARepository {
