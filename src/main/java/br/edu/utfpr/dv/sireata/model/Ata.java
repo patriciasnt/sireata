@@ -7,7 +7,8 @@ import java.util.List;
 
 import br.edu.utfpr.dv.sireata.util.DateUtils;
 
-public class Ata {
+@Entity
+public class Ata implements Serializable {
 	
 	public enum TipoAta{
 		ORDINARIA(0), EXTRAORDINARIA(1);
@@ -42,13 +43,16 @@ public class Ata {
 			}
 		}
 	}
-	
+
+	@Id
+	@GeneratedValue
 	private int idAta;
 	private Orgao orgao;
 	private Usuario presidente;
 	private Usuario secretario;
 	private TipoAta tipo;
 	private int numero;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date data;
 	private String local;
 	private String localCompleto;
